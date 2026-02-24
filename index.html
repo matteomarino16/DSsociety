@@ -11,9 +11,9 @@
       --text: #111111;
       --muted: #666666;
       --border: #e5e5e5;
-      --shadow: 0 2px 8px rgba(0,0,0,.08);
+      --shadow: 0 2px 8px rgba(0,0,0,.08);      --header-h: 64px;
     }
-    * { box-sizing: border-box }
+    * { box-sizing: border-box }z
     html, body { height: 100% }
     body {
       margin: 0;
@@ -53,7 +53,10 @@
     }
     .btn:hover { background: #f5f5f5 }
     .hero {
-      padding: 48px 0 24px;
+      min-height: calc(100vh - var(--header-h));
+      padding: 32px 0;
+      display: flex;
+      align-items: center;
     }
     .hero-grid {
       display: grid;
@@ -92,6 +95,7 @@
     .tile .content { padding: 20px }
     .tile h3 { margin: 0 0 8px; font-size: 18px }
     .tile p { margin: 0 0 12px; color: var(--muted) }
+    .tile:hover { }
     .products-grid {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
     }
@@ -107,6 +111,7 @@
     .card .name { font-size: 15px; margin: 0 0 6px }
     .card .meta { font-size: 13px; color: var(--muted); margin: 0 0 12px }
     .card .actions { display: flex; gap: 8px }
+    .card:hover { }
     .banner {
       border: 1px solid var(--border); border-radius: 12px; padding: 18px; display: flex; justify-content: space-between; align-items: center;
     }
@@ -116,6 +121,7 @@
     .newsletter input {
       padding: 10px 12px; border: 1px solid var(--text); border-radius: 999px; font-size: 14px; color: var(--text); background: transparent;
     }
+    .newsletter input:focus-visible { }
     .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px }
     .quote {
       border: 1px solid var(--border); border-radius: 12px; padding: 16px; color: var(--muted);
@@ -145,8 +151,26 @@
     }
     @media (max-width: 620px) {
       nav { display: none }
-      .products-grid { grid-template-columns: 1fr }
+      :root { --header-h: 56px }
+      .container { padding: 0 16px }
+      .topbar { padding: 12px 0 }
+      .brand { font-size: 18px; letter-spacing: .05em }
+      .btn { padding: 12px 18px; font-size: 15px }
+      .hero { min-height: calc(100vh - var(--header-h)); padding: 20px 0 }
+      .visual { display: none }
+      .section { padding: 14px 0 }
+      .section h2 { font-size: 18px; margin: 0 0 12px }
+      .gender-tiles { gap: 12px }
+      .tile .content { padding: 16px }
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px }
+      .card .img-wrap svg { height: 120px }
+      #novita .products-grid .card .img-wrap svg { height: 110px }
+      .card .info { padding: 10px }
+      .card .name { font-size: 13px }
+      .card .meta { font-size: 11px }
+      .newsletter { grid-template-columns: 1fr; gap: 8px }
       .footer-grid { grid-template-columns: 1fr }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center }
     }
   </style>
 </head>
@@ -174,7 +198,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h1>Capelli al centro. Bellezza essenziale, per Lui e per Lei.</h1>
+          <h1>Bellezza essenziale  per Lui e per Lei.</h1>
           <p class="lead">Selezione curata di prodotti professionali per la cura e lo styling dei capelli. Qualità, semplicità, risultati.</p>
           <div class="cta-group">
             <a class="btn" href="#uomo">Acquista Uomo</a>
@@ -404,9 +428,12 @@
 
     <section class="section">
       <div class="container grid-2">
-        <div class="newsletter" id="newsletter">
-          <input type="email" placeholder="La tua email" aria-label="Email">
-          <button class="btn" type="button">Iscriviti</button>
+        <div class="newsletter-wrap">
+          <h2>Newsletter</h2>
+          <div class="newsletter" id="newsletter">
+            <input type="email" placeholder="La tua email" aria-label="Email">
+            <button class="btn" type="button">Iscriviti</button>
+          </div>
         </div>
         <div class="banner">
           <div>Programma fedeltà D&amp;S: premi su ogni acquisto</div>
@@ -460,7 +487,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <div>© 2026 D&amp;S Society</div>
+      <div>© 2026 D&amp;S Society • Web by <a href="https://instagram.com/_matteomarino" target="_blank" rel="noopener">Matteo Marino</a></div>
       <div><a href="#">Termini</a> • <a href="#">Privacy</a> • <a href="#">Cookie</a></div>
     </div>
   </footer>
