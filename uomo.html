@@ -57,8 +57,9 @@
     .lead { color: var(--muted) }
     .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px }
     .card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column }
-    .card .img-wrap { border-bottom: 1px solid var(--border); background: #fff }
-    .card .img-wrap img { display: block; width: 100%; height: auto }
+    .card .img-wrap { border-bottom: 1px solid var(--border); background: #fff; height: 220px; display: flex; align-items: center; justify-content: center }
+    .card .img-wrap img { display: block; width: auto; height: 100%; object-fit: contain }
+    .card .img-wrap svg { width: auto; height: 100% }
     .card .info { padding: 14px }
     .card .name { font-size: 15px; margin: 0 0 6px }
     .card .meta { font-size: 13px; color: var(--muted); margin: 0 0 12px }
@@ -84,7 +85,7 @@
       .btn { padding: 9px 14px; font-size: 13px }
       .section { padding: 14px 0 }
       .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px }
-      .card .img-wrap img { max-height: 120px }
+      .card .img-wrap { height: 130px }
       .card .info { padding: 10px }
       .card .name { font-size: 13px }
       .card .meta { font-size: 11px }
@@ -121,8 +122,26 @@
       <div class="container">
         <h1>Uomo</h1>
         <p class="lead">Routine essenziale e styling naturale.</p>
-        <h2>Detossinante</h2>
+        <h2>Linea Detossinante</h2>
         <div class="products-grid">
+          <div class="card">
+            <div class="img-wrap">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampessenza</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Shampoo Essenza Detossinante</p>
+              <p class="meta">shampoo trattamento detossinante</p>
+              <p class="meta">250ml • 17,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
           <div class="card">
             <div class="img-wrap">
               <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +151,8 @@
               </svg>
             </div>
             <div class="info">
-              <p class="name">Lozione Detossinante a Flacone</p>
+              <p class="name">Lozione Detossinante</p>
+              <p class="meta">lozione trattamento detossinante</p>
               <p class="meta">100ml • 17,90€</p>
               <div class="actions">
                 <a class="btn" href="index.html#prodotti">Dettagli</a>
@@ -149,8 +169,9 @@
               </svg>
             </div>
             <div class="info">
-              <p class="name">Essenza Detossinante</p>
-              <p class="meta">50ml • 19,90€</p>
+              <p class="name">Fiale Detossinanti</p>
+              <p class="meta">fiale trattamento detossinante</p>
+              <p class="meta">10x10ml • 18,90€</p>
               <div class="actions">
                 <a class="btn" href="index.html#prodotti">Dettagli</a>
                 <a class="btn" href="index.html#prodotti">Aggiungi</a>
@@ -158,18 +179,40 @@
             </div>
           </div>
         </div>
-        <h2 style="margin-top:24px">Energizzante</h2>
+        <h2 style="margin-top:24px">Linea Energizzante</h2>
+        <p class="lead">Contrasta le diverse e più comuni forme di caduta dei capelli.</p>
         <div class="products-grid">
           <div class="card">
             <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+              <img src="uomo/energizzante /ShampessenzaEnergizzante.jpg" alt="Shampoo Essenza Energizzante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampoo Essenza</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Shampessenza Energizzante</p>
+              <p class="meta">shampo trattamento caduta</p>
+              <p class="meta">250ml • 17,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap">
+              <img src="uomo/energizzante /LozioneEnergizzante.jpg" alt="Lozione Energizzante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
                 <rect width="600" height="400" fill="#fff"/>
                 <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
                 <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Lozione</text>
               </svg>
             </div>
             <div class="info">
-              <p class="name">Lozione Energizzante a Flacone</p>
+              <p class="name">Lozione Energizzante</p>
+              <p class="meta">lozione trattamento caduta</p>
               <p class="meta">100ml • 17,90€</p>
               <div class="actions">
                 <a class="btn" href="index.html#prodotti">Dettagli</a>
@@ -179,15 +222,17 @@
           </div>
           <div class="card">
             <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+              <img src="uomo/energizzante /FialeEnergizzante.jpg" alt="Fiale Energizzanti" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
                 <rect width="600" height="400" fill="#fff"/>
                 <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Essenza</text>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Fiale</text>
               </svg>
             </div>
             <div class="info">
               <p class="name">Essenza Energizzante</p>
-              <p class="meta">50ml • 19,90€</p>
+              <p class="meta">fiale trattamento caduta</p>
+              <p class="meta">10x10ml • 18,90€</p>
               <div class="actions">
                 <a class="btn" href="index.html#prodotti">Dettagli</a>
                 <a class="btn" href="index.html#prodotti">Aggiungi</a>
@@ -195,8 +240,148 @@
             </div>
           </div>
         </div>
-        <h2 style="margin-top:24px">Lenitiva</h2>
+        <h2 style="margin-top:24px">Linea Lenitiva</h2>
+        <p class="lead">Lenisci le manifestazioni del cuoio capelluto sensibile, sottile e secco.</p>
         <div class="products-grid">
+          <div class="card">
+            <div class="img-wrap">
+              <img src="uomo/lenitiva/Physia oe_ Shampessenza Lenitivo _ render.jpg" alt="Shampessenza Lenitiva" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampoo Essenza</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Shampoo Essenza Lenitiva</p>
+              <p class="meta">shampoo per cuoio capelluto sensibile e reattivo.</p>
+              <p class="meta">250ml • 17,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap">
+              <img src="uomo/lenitiva/Physia oe_ Fluido Demolenitivo _ render.jpg" alt="Lozione Lenitiva" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Lozione</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Lozione Lenitiva</p>
+              <p class="meta">lozione per cuti sensibili che presentano reattività ai servizi tecnici.</p>
+              <p class="meta">100ml • 17,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap">
+              <img src="uomo/lenitiva/Physia oe_ Fiala Lenitiva_ render.jpg" alt="Fiale Lenitive" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Fiale</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Fiale Lenitive</p>
+              <p class="meta">fiala trattamento benessere.</p>
+              <p class="meta">10x10ml • 18,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top:24px">Linea Idratante</h2>
+        <p class="lead">Contrasta efficacemente la secchezza del cuoio capelluto.</p>
+        <div class="products-grid">
+          <div class="card">
+            <div class="img-wrap">
+              <img src="uomo/idratante /Physia oe_ Shampessenza Idratante_render.jpg" alt="Shampessenza Idratante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampoo Essenza</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Shampoo Essenza Idratante</p>
+              <p class="meta">shampoo trattamento idro-rigenerante.</p>
+              <p class="meta">250ml • 17,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap">
+              <img src="uomo/idratante /Physia oe_ Singergia Idratante_render.jpg" alt="Lozione Idratante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Lozione</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Lozione Idratante</p>
+              <p class="meta">lozione intensiva idro-rigenerante.</p>
+              <p class="meta">100ml • 17,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap">
+              <img src="uomo/idratante /Physia oe_ Fiala Idratante_render.jpg" alt="Fiale Idratanti" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Fiale</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Fiale Idratanti</p>
+              <p class="meta">fiala trattamento idro-rigenerante.</p>
+              <p class="meta">10x10ml • 18,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top:24px">Linea Normalizzante</h2>
+        <div class="products-grid">
+          <div class="card">
+            <div class="img-wrap">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="400" fill="#fff"/>
+                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampoo Essenza</text>
+              </svg>
+            </div>
+            <div class="info">
+              <p class="name">Shampoo Essenza Normalizzante</p>
+              <p class="meta">shampoo trattamento normalizzante</p>
+              <p class="meta">250ml • 17,90€</p>
+              <div class="actions">
+                <a class="btn" href="index.html#prodotti">Dettagli</a>
+                <a class="btn" href="index.html#prodotti">Aggiungi</a>
+              </div>
+            </div>
+          </div>
           <div class="card">
             <div class="img-wrap">
               <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +391,8 @@
               </svg>
             </div>
             <div class="info">
-              <p class="name">Lozione Lenitiva a Flacone</p>
+              <p class="name">Lozione Normalizzante</p>
+              <p class="meta">lozione trattamento normalizzante</p>
               <p class="meta">100ml • 17,90€</p>
               <div class="actions">
                 <a class="btn" href="index.html#prodotti">Dettagli</a>
@@ -219,86 +405,13 @@
               <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
                 <rect width="600" height="400" fill="#fff"/>
                 <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Essenza</text>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Fiale</text>
               </svg>
             </div>
             <div class="info">
-              <p class="name">Essenza Lenitiva</p>
-              <p class="meta">50ml • 19,90€</p>
-              <div class="actions">
-                <a class="btn" href="index.html#prodotti">Dettagli</a>
-                <a class="btn" href="index.html#prodotti">Aggiungi</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2 style="margin-top:24px">Idratante</h2>
-        <div class="products-grid">
-          <div class="card">
-            <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                <rect width="600" height="400" fill="#fff"/>
-                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Lozione</text>
-              </svg>
-            </div>
-            <div class="info">
-              <p class="name">Lozione Idratante a Flacone</p>
-              <p class="meta">100ml • 17,90€</p>
-              <div class="actions">
-                <a class="btn" href="index.html#prodotti">Dettagli</a>
-                <a class="btn" href="index.html#prodotti">Aggiungi</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                <rect width="600" height="400" fill="#fff"/>
-                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Essenza</text>
-              </svg>
-            </div>
-            <div class="info">
-              <p class="name">Essenza Idratante</p>
-              <p class="meta">50ml • 19,90€</p>
-              <div class="actions">
-                <a class="btn" href="index.html#prodotti">Dettagli</a>
-                <a class="btn" href="index.html#prodotti">Aggiungi</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h2 style="margin-top:24px">Normalizzante</h2>
-        <div class="products-grid">
-          <div class="card">
-            <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                <rect width="600" height="400" fill="#fff"/>
-                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Lozione</text>
-              </svg>
-            </div>
-            <div class="info">
-              <p class="name">Lozione Normalizzante a Flacone</p>
-              <p class="meta">100ml • 17,90€</p>
-              <div class="actions">
-                <a class="btn" href="index.html#prodotti">Dettagli</a>
-                <a class="btn" href="index.html#prodotti">Aggiungi</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                <rect width="600" height="400" fill="#fff"/>
-                <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Essenza</text>
-              </svg>
-            </div>
-            <div class="info">
-              <p class="name">Essenza Normalizzante</p>
-              <p class="meta">50ml • 19,90€</p>
+              <p class="name">Fiale Normalizzanti</p>
+              <p class="meta">fiale trattamento normalizzante</p>
+              <p class="meta">10x10ml • 18,90€</p>
               <div class="actions">
                 <a class="btn" href="index.html#prodotti">Dettagli</a>
                 <a class="btn" href="index.html#prodotti">Aggiungi</a>

@@ -97,12 +97,12 @@
     .tile p { margin: 0 0 12px; color: var(--muted) }
     .tile:hover { }
     .products-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
     }
     .bestsellers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px }
     .bestsellers-column h3 { margin: 0 0 12px; font-size: 18px }
     .scroll-row { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch }
-    .scroll-row .card { min-width: 220px; scroll-snap-align: start }
+    .scroll-row .card { min-width: 200px; scroll-snap-align: start }
     .card {
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -110,10 +110,12 @@
       box-shadow: var(--shadow);
       display: flex; flex-direction: column;
     }
-    .card .img-wrap { border-bottom: 1px solid var(--border); background: #fff }
-    .card .info { padding: 14px }
-    .card .name { font-size: 15px; margin: 0 0 6px }
-    .card .meta { font-size: 13px; color: var(--muted); margin: 0 0 12px }
+    .card .img-wrap { border-bottom: 1px solid var(--border); background: #fff; height: 220px; display: flex; align-items: center; justify-content: center }
+    .card .img-wrap img { display: block; width: auto; height: 100%; object-fit: contain }
+    .card .img-wrap svg { width: auto; height: 100% }
+    .card .info { padding: 12px }
+    .card .name { font-size: 14px; margin: 0 0 6px }
+    .card .meta { font-size: 12px; color: var(--muted); margin: 0 0 10px }
     .card .actions { display: flex; gap: 8px }
     .card:hover { }
     .banner {
@@ -173,7 +175,10 @@
       .tile .content { padding: 16px }
       .tile .content .btn { padding: 8px 12px; font-size: 12px }
       .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px }
-      .scroll-row .card { min-width: 160px }
+      .scroll-row .card { min-width: 150px }
+      .card .img-wrap { height: 130px }
+      .card .img-wrap img { height: 120px }
+      #novita .products-grid .card .img-wrap img { height: 110px }
       .card .img-wrap svg { height: 120px }
       /* immagini non utilizzate attualmente */
       #novita .products-grid .card .img-wrap svg { height: 110px }
@@ -200,8 +205,8 @@
       <div class="brand">D&amp;S Society</div>
       <nav>
         <ul>
-          <li><a href="#uomo">Uomo</a></li>
-          <li><a href="#donna">Donna</a></li>
+          <li><a href="uomo.html">Uomo</a></li>
+          <li><a href="donna.html">Donna</a></li>
           <li><a href="#prodotti">Prodotti</a></li>
           <li><a href="#novita">Novità</a></li>
           <li><a href="#contatti">Contatti</a></li>
@@ -277,52 +282,58 @@
         <div class="products-grid">
           <div class="card">
             <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+              <img src="uomo/energizzante /ShampessenzaEnergizzante.jpg" alt="Shampessenza Energizzante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
                 <rect width="600" height="400" fill="#fff"/>
                 <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampoo</text>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampessenza</text>
               </svg>
             </div>
             <div class="info">
-              <p class="name">Shampoo Idratante</p>
-              <p class="meta">250ml • 14,90€</p>
+              <p class="name">Shampessenza Energizzante</p>
+              <p class="meta">shampo trattamento caduta</p>
+              <p class="meta">250ml • 17,90€</p>
               <div class="actions">
-                <a class="btn" href="#prodotti">Dettagli</a>
-                <a class="btn" href="#prodotti">Aggiungi</a>
+                <a class="btn" href="uomo.html">Dettagli</a>
+                <a class="btn" href="uomo.html">Aggiungi</a>
               </div>
             </div>
           </div>
           <div class="card">
             <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+              <img src="uomo/energizzante /LozioneEnergizzante.jpg" alt="Lozione Energizzante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
                 <rect width="600" height="400" fill="#fff"/>
                 <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Balsamo</text>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Lozione</text>
               </svg>
             </div>
             <div class="info">
-              <p class="name">Balsamo Nutriente</p>
-              <p class="meta">200ml • 16,90€</p>
+              <p class="name">Lozione Energizzante</p>
+              <p class="meta">lozione trattamento caduta</p>
+              <p class="meta">100ml • 17,90€</p>
               <div class="actions">
-                <a class="btn" href="#prodotti">Dettagli</a>
-                <a class="btn" href="#prodotti">Aggiungi</a>
+                <a class="btn" href="uomo.html">Dettagli</a>
+                <a class="btn" href="uomo.html">Aggiungi</a>
               </div>
             </div>
           </div>
           <div class="card">
             <div class="img-wrap">
-              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+              <img src="uomo/energizzante /FialeEnergizzante.jpg" alt="Essenza Energizzante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
                 <rect width="600" height="400" fill="#fff"/>
                 <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Gel</text>
+                <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Essenza</text>
               </svg>
             </div>
             <div class="info">
-              <p class="name">Gel Modellante</p>
-              <p class="meta">150ml • 9,90€</p>
+              <p class="name">Essenza Energizzante</p>
+              <p class="meta">fiale trattamento caduta</p>
+              <p class="meta">10x10ml • 18,90€</p>
               <div class="actions">
-                <a class="btn" href="#prodotti">Dettagli</a>
-                <a class="btn" href="#prodotti">Aggiungi</a>
+                <a class="btn" href="uomo.html">Dettagli</a>
+                <a class="btn" href="uomo.html">Aggiungi</a>
               </div>
             </div>
           </div>
@@ -380,35 +391,39 @@
             <div class="scroll-row">
               <div class="card">
                 <div class="img-wrap">
-                  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                  <img src="uomo/energizzante /ShampessenzaEnergizzante.jpg" alt="Shampessenza Energizzante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
                     <rect width="600" height="400" fill="#fff"/>
                     <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                    <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Siero</text>
+                    <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Shampessenza</text>
                   </svg>
                 </div>
                 <div class="info">
-                  <p class="name">Siero Anticrespo</p>
-                  <p class="meta">50ml • 15,90€</p>
+                  <p class="name">Shampessenza Energizzante</p>
+                  <p class="meta">shampo trattamento caduta</p>
+                  <p class="meta">250ml • 17,90€</p>
                   <div class="actions">
-                    <a class="btn" href="#prodotti">Dettagli</a>
-                    <a class="btn" href="#prodotti">Aggiungi</a>
+                    <a class="btn" href="uomo.html">Dettagli</a>
+                    <a class="btn" href="uomo.html">Aggiungi</a>
                   </div>
                 </div>
               </div>
               <div class="card">
                 <div class="img-wrap">
-                  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                  <img src="uomo/energizzante /LozioneEnergizzante.jpg" alt="Lozione Energizzante" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:none">
                     <rect width="600" height="400" fill="#fff"/>
                     <rect x="110" y="80" width="380" height="240" fill="#fff" stroke="#111" stroke-width="2" rx="12"/>
-                    <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Cera</text>
+                    <text x="300" y="215" text-anchor="middle" font-size="20" fill="#111">Lozione</text>
                   </svg>
                 </div>
                 <div class="info">
-                  <p class="name">Cera Opaca</p>
-                  <p class="meta">75ml • 11,90€</p>
+                  <p class="name">Lozione Energizzante</p>
+                  <p class="meta">lozione trattamento caduta</p>
+                  <p class="meta">100ml • 17,90€</p>
                   <div class="actions">
-                    <a class="btn" href="#prodotti">Dettagli</a>
-                    <a class="btn" href="#prodotti">Aggiungi</a>
+                    <a class="btn" href="uomo.html">Dettagli</a>
+                    <a class="btn" href="uomo.html">Aggiungi</a>
                   </div>
                 </div>
               </div>
