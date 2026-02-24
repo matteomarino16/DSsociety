@@ -13,13 +13,20 @@
       --border: #e5e5e5;
       --shadow: 0 2px 8px rgba(0,0,0,.08);      --header-h: 64px;
     }
+    @font-face {
+      font-family: "Akkurat";
+      src: url("Akkurat.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
     * { box-sizing: border-box }z
     html, body { height: 100% }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, system-ui, sans-serif;
+      font-family: "Akkurat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, system-ui, sans-serif;
       line-height: 1.6;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
@@ -131,6 +138,13 @@
     .newsletter-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px }
     .newsletter-wrap h2 { text-align: center; font-size: 20px }
     .newsletter { max-width: 420px; margin: 0 auto }
+    .contact-box {
+      border: 1px solid var(--border); border-radius: 12px; padding: 16px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      box-shadow: var(--shadow);
+    }
+    .contact-item h3 { margin: 0 0 6px; font-size: 15px }
+    .contact-item p, .contact-item a { margin: 0; color: var(--muted); font-size: 13px }
     .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px }
     .quote {
       border: 1px solid var(--border); border-radius: 12px; padding: 16px; color: var(--muted);
@@ -178,10 +192,10 @@
       .scroll-row .card { min-width: 150px }
       .card .img-wrap { height: 130px }
       .card .img-wrap img { height: 120px }
-      #novita .products-grid .card .img-wrap img { height: 110px }
+      #novita .products-grid .card .img-wrap img { height: 120px }
       .card .img-wrap svg { height: 120px }
       /* immagini non utilizzate attualmente */
-      #novita .products-grid .card .img-wrap svg { height: 110px }
+      #novita .products-grid .card .img-wrap svg { height: 120px }
       /* immagini non utilizzate attualmente */
       .card .info { padding: 10px }
       .card .name { font-size: 13px }
@@ -192,6 +206,9 @@
       .newsletter-wrap h2 { font-size: 18px }
       .newsletter input { width: 100% }
       .newsletter .btn { width: 100% }
+      .contact-box { grid-template-columns: 1fr; }
+      .contact-item h3 { font-size: 14px }
+      .contact-item p, .contact-item a { font-size: 12px }
       .footer-grid { grid-template-columns: 1fr; gap: 12px; padding: 16px 0 }
       .footer-grid h4 { font-size: 14px }
       .footer-grid ul { gap: 6px }
@@ -440,6 +457,24 @@
           <div class="newsletter" id="newsletter">
             <input type="email" placeholder="La tua email" aria-label="Email">
             <button class="btn" type="button">Iscriviti</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="contact-box" aria-labelledby="contatti-rapidi">
+          <div class="contact-item">
+            <h3 id="contatti-rapidi">Email</h3>
+            <a href="mailto:info@dssociety.it">info@dssociety.it</a>
+          </div>
+          <div class="contact-item">
+            <h3>Indirizzo</h3>
+            <p>Via Roma 123, 20100 Milano (MI)</p>
+          </div>
+          <div class="contact-item">
+            <h3>Telefono</h3>
+            <a href="tel:+393201234567">+39 320 123 4567</a>
           </div>
         </div>
       </div>
