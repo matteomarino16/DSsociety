@@ -93,16 +93,13 @@
       padding: 24px 0;
     }
     .section h2 {
-      font-size: 22px; letter-spacing: .02em; margin: 0 0 16px;
+      font-size: 22px; letter-spacing: .02em; margin: 0 0 16px; text-align: center;
     }
     .gender-tiles {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
     }
-    .tile {
-      position: relative; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .tile .content { padding: 20px }
+    .tile { position: relative; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center }
+    .tile .content { padding: 20px; text-align: center }
     .tile h3 { margin: 0 0 8px; font-size: 18px }
     .tile p { margin: 0 0 12px; color: var(--muted) }
     .tile:hover { }
@@ -128,10 +125,10 @@
     .card .img-wrap { border-bottom: 1px solid var(--border); background: #fff; height: 220px; display: flex; align-items: center; justify-content: center }
     .card .img-wrap img { display: block; width: auto; height: 100%; object-fit: contain }
     .card .img-wrap svg { width: auto; height: 100% }
-    .card .info { padding: 12px }
+    .card .info { padding: 12px; text-align: center }
     .card .name { font-size: 14px; margin: 0 0 6px }
     .card .meta { font-size: 12px; color: var(--muted); margin: 0 0 10px }
-    .card .actions { display: flex; gap: 8px }
+    .card .actions { display: flex; gap: 8px; justify-content: center }
     .card:hover { }
     .banner {
       border: 1px solid var(--border); border-radius: 12px; padding: 18px; display: flex; justify-content: center; align-items: center; text-align: center;
@@ -158,6 +155,7 @@
       border: 1px solid var(--border); border-radius: 12px; padding: 16px; color: var(--muted);
       box-shadow: var(--shadow);
     }
+    .footer-logo { display:block; height:40px }
     footer {
       border-top: 1px solid var(--border);
       margin-top: 40px;
@@ -506,7 +504,7 @@
   <footer id="contatti">
     <div class="container footer-grid">
       <div>
-        <div class="brand">D&amp;S Society</div>
+        <img class="footer-logo" src="logo.png" alt="D&S Society">
         <p style="color:var(--muted);margin:8px 0 0">Bellezza capelli essenziale per tutti.</p>
       </div>
       <div>
