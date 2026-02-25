@@ -46,10 +46,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 0;
+      padding: 8px 0;
       gap: 16px;
     }
-    .brand { font-weight: 700; letter-spacing: .04em; font-size: 20px }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .04em; font-size: 20px }
+    .brand img { display: block; height: clamp(48px, 8vw, 120px); width: auto }
+    .brand-text { display: none; font-weight: 700 }
     nav ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0 }
     nav a { font-size: 15px }
     .cta-mini { display: flex; gap: 12px }
@@ -74,6 +76,7 @@
       nav { display: none }
       .container { padding: 0 16px }
       .brand { font-size: 18px; letter-spacing: .05em }
+      .brand img { height: clamp(48px, 18vw, 120px) }
       .btn { padding: 9px 14px; font-size: 13px }
       .section { padding: 14px 0 }
       .footer-grid { grid-template-columns: 1fr }
@@ -85,14 +88,14 @@
 <body>
   <header>
     <div class="container topbar">
-      <div class="brand">D&amp;S Society</div>
+      <div class="brand"><a href="index.html"><img src="logo.png" alt="D&S Society" onerror="this.style.display='none'; this.closest('.brand').querySelector('.brand-text').style.display='inline-block'"></a><span class="brand-text">D&amp;S Society</span></div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="uomo.html">Uomo</a></li>
           <li><a href="donna.html">Donna</a></li>
           <li><a href="index.html#prodotti">Prodotti</a></li>
-          <li><a href="index.html#novita">Novità</a></li>
+          <li><a href="index.html#offerte">Offerte</a></li>
           <li><a href="index.html#contatti">Contatti</a></li>
         </ul>
       </nav>
@@ -133,14 +136,12 @@
         <ul>
           <li><a href="#">Chi siamo</a></li>
           <li><a href="#">Contatti</a></li>
-          <li><a href="#">Lavora con noi</a></li>
         </ul>
       </div>
       <div>
         <h4>Seguici</h4>
         <ul>
           <li><a href="#">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
           <li><a href="#">YouTube</a></li>
         </ul>
       </div>
