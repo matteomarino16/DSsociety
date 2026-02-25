@@ -3,16 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>D&amp;S Society • Haircare per lei e per lui</title>
+    <title>D&amp;S Society • Shop Donna</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
   </head>
-  <body class="page" data-page="home">
+  <body class="page" data-page="shop-donna">
     <header class="site-header">
       <div class="container site-header-inner">
         <a href="index.html" class="logo">
@@ -63,88 +57,54 @@
 
     <main class="container">
       <section class="hero">
-        <div class="hero-eyebrow">HAIRCARE PER LEI E PER LUI</div>
-        <h1 class="hero-title">Bellezza essenziale per Lui e per Lei.</h1>
+        <div class="hero-eyebrow">Shop Donna</div>
+        <h1 class="hero-title">Haircare essenziale per lei.</h1>
         <p class="hero-subtitle">
-          Selezione curata di prodotti professionali per la cura e lo styling dei capelli.
-          Qualità, semplicità, risultati.
+          Shampoo, conditioner, styling e trattamenti pensati per accompagnare ogni routine.
         </p>
-        <div class="hero-actions">
-          <a href="shop-donna.html" class="btn-primary">SHOP DONNA</a>
-          <a href="shop-uomo.html" class="btn-secondary">SHOP UOMO</a>
-        </div>
       </section>
 
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">Best seller</h2>
-          <p class="section-subtitle">
-            I prodotti più scelti dai nostri clienti, pronti per entrare nella tua routine.
-          </p>
-        </div>
-        <div class="product-grid" data-best-sellers></div>
-      </section>
-
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">Perché D&amp;S Society</h2>
-        </div>
-        <div class="why-grid">
-          <div>
-            <div class="why-item-title">Qualità</div>
-            <p class="why-item-text">
-              Formule essenziali, mirate, con texture leggere e performanti.
-            </p>
+      <section>
+        <div class="filters-bar">
+          <div class="filter-group">
+            <label for="f-type-donna">Categoria</label>
+            <select id="f-type-donna" data-filter-type>
+              <option value="all">Tutte</option>
+              <option value="shampoo">Shampoo</option>
+              <option value="conditioner">Conditioner</option>
+              <option value="styling">Styling</option>
+              <option value="trattamenti">Trattamenti</option>
+            </select>
           </div>
-          <div>
-            <div class="why-item-title">Risultati</div>
-            <p class="why-item-text">
-              Routine pensate per dare risultati visibili, senza complicazioni.
-            </p>
+          <div class="filter-group">
+            <label for="f-price-donna">Prezzo</label>
+            <select id="f-price-donna" data-filter-price>
+              <option value="all">Tutti</option>
+              <option value="low">Sotto 20€</option>
+              <option value="mid">20€ – 25€</option>
+              <option value="high">Oltre 25€</option>
+            </select>
           </div>
-          <div>
-            <div class="why-item-title">Routine</div>
-            <p class="why-item-text">
-              Percorsi semplici per lavare, trattare e definire i capelli ogni giorno.
-            </p>
+          <div class="filter-group">
+            <label for="f-sort-donna">Ordina</label>
+            <select id="f-sort-donna" data-filter-sort>
+              <option value="popular">Più popolari</option>
+              <option value="price-asc">Prezzo crescente</option>
+              <option value="price-desc">Prezzo decrescente</option>
+            </select>
           </div>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">Categorie</h2>
-        </div>
-        <div class="category-grid">
-          <a href="shop-donna.html" class="category-card">
-            <div class="category-label">Donna</div>
-            <div class="category-link">Entra nello shop</div>
-          </a>
-          <a href="shop-uomo.html" class="category-card">
-            <div class="category-label">Uomo</div>
-            <div class="category-link">Entra nello shop</div>
-          </a>
-        </div>
+        <div class="product-grid" data-shop-grid></div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="site-footer-inner">
-        <div>&copy; D&amp;Ssociety.it - Tutti i diritti sono riservati </div>
+        <div>&copy; D&amp;S Society</div>
         <div class="footer-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="termini.html">Termini e Condizioni</a>
         </div>
-      </div>
-      <div class="site-footer-credit">
-        web by
-        <a
-          href="https://www.instagram.com/_matteomarino"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Matteo Marino
-        </a>
       </div>
     </footer>
 
