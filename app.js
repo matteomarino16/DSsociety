@@ -1,118 +1,7 @@
 const PRODUCTS = [
-  {
-    id: "donna-shampoo-luce",
-    slug: "shampoo-luce-donna",
-    name: "Shampoo Luce",
-    gender: "donna",
-    type: "shampoo",
-    tag: "Bestseller",
-    price: 19,
-    popularity: 1,
-    line: "luce",
-    lineLabel: "Linea luce",
-    short: "Detergenza delicata, brillantezza immediata.",
-    benefits: [
-      "Detersione morbida per uso frequente",
-      "Capelli luminosi e leggeri",
-      "Formula senza pesare le lunghezze",
-    ],
-    howTo: "Applica su capelli bagnati, massaggia, emulsiona con acqua e risciacqua.",
-  },
-  {
-    id: "donna-conditioner-seta",
-    slug: "conditioner-seta-donna",
-    name: "Conditioner Seta",
-    gender: "donna",
-    type: "conditioner",
-    tag: "Bestseller",
-    price: 21,
-    popularity: 2,
-    line: "seta",
-    lineLabel: "Linea seta",
-    short: "Nutrimento leggero, capelli fluidi al tatto.",
-    benefits: [
-      "Districa istantaneamente",
-      "Riduce il crespo",
-      "Dona morbidezza senza appesantire",
-    ],
-    howTo: "Applicare sulle lunghezze tamponate, lasciare agire 2-3 minuti e risciacquare.",
-  },
-  {
-    id: "donna-styling-morbido",
-    slug: "styling-morbido-donna",
-    name: "Crema Styling Morbido",
-    gender: "donna",
-    type: "styling",
-    tag: "Novità",
-    price: 23,
-    popularity: 3,
-    line: "styling-morbido",
-    lineLabel: "Linea styling morbido",
-    short: "Definizione soffice e naturale.",
-    benefits: [
-      "Definisce onde e lunghezze",
-      "Finish morbido, non rigido",
-      "Protegge dal calore del phon",
-    ],
-    howTo: "Lavorare tra le mani e applicare su capelli umidi prima dell’asciugatura.",
-  },
-  {
-    id: "donna-trattamento-notte",
-    slug: "trattamento-notte-donna",
-    name: "Trattamento Notte Riparatore",
-    gender: "donna",
-    type: "trattamenti",
-    tag: "Novità",
-    price: 29,
-    popularity: 4,
-    line: "notte",
-    lineLabel: "Linea notte",
-    short: "Rigenera mentre dormi.",
-    benefits: [
-      "Riduce la rottura delle lunghezze",
-      "Capelli più compatti al risveglio",
-      "Si assorbe senza ungere",
-    ],
-    howTo: "Applicare sulle lunghezze asciutte la sera, lasciare agire tutta la notte.",
-  },
-  {
-    id: "donna-siero-punte",
-    slug: "siero-punte-donna",
-    name: "Siero Punte Lucide",
-    gender: "donna",
-    type: "trattamenti",
-    tag: "Bestseller",
-    price: 25,
-    popularity: 5,
-    line: "siero-punte",
-    lineLabel: "Linea siero punte",
-    short: "Chiude le punte e illumina le lunghezze.",
-    benefits: [
-      "Riduce l’effetto doppie punte",
-      "Dona lucentezza immediata",
-      "Texture ultra leggera",
-    ],
-    howTo: "Applicare una piccola quantità sulle punte asciutte o umide.",
-  },
-  {
-    id: "donna-maschera-intensa",
-    slug: "maschera-intensa-donna",
-    name: "Maschera Intensa Nutriente",
-    gender: "donna",
-    type: "trattamenti",
-    tag: "Bestseller",
-    price: 27,
-    popularity: 6,
-    line: "maschera-intensa",
-    lineLabel: "Linea maschera intensa",
-    short: "Boost di nutrimento per capelli esigenti.",
-    benefits: [
-      "Idrata in profondità",
-      "Capelli più corposi",
-      "Ideale una volta a settimana",
-    ],
-    howTo: "Applicare in modo uniforme, lasciare agire 5-10 minuti e risciacquare.",
-  },
+  // PRODOTTI DONNA RIMOSSI TEMPORANEAMENTE
+
+  // --- LINEA UOMO (PRODOTTI REALI) ---
   {
     id: "uomo-energizzante-fiale",
     slug: "fiale-energizzanti-uomo",
@@ -200,103 +89,23 @@ const PRODUCTS = [
     gender: "uomo",
     type: "shampoo",
     tag: "Novità",
-    price: 20,
+    price: 19,
     popularity: 5,
     line: "idratante",
     lineLabel: "Linea idratante",
     image: "uomo/linea idratante /Physia oe_ Shampessenza Idratante_render.jpg",
-    short: "Detersione delicata per capelli secchi.",
-    benefits: [
-      "Aiuta a mantenere il giusto livello di idratazione",
-      "Capelli più morbidi al tatto",
-      "Adatto a lavaggi frequenti",
-    ],
-    howTo: "Massaggiare su cute e lunghezze bagnate, poi risciacquare.",
-  },
-  {
-    id: "uomo-idratante-sinergia",
-    slug: "sinergia-idratante-uomo",
-    name: "Sinergia Idratante",
-    gender: "uomo",
-    type: "trattamenti",
-    tag: "Novità",
-    price: 26,
-    popularity: 6,
-    line: "idratante",
-    lineLabel: "Linea idratante",
-    image: "uomo/linea idratante /Physia oe_ Singergia Idratante_render.jpg",
-    short: "Trattamento sinergico per fibre disidratate.",
-    benefits: [
-      "Supporta la fibra nei periodi di maggiore stress",
-      "Capelli più elastici e compatti",
-      "Ideale in abbinamento allo shampoo idratante",
-    ],
-    howTo: "Applicare su lunghezze e punte, lasciare agire e risciacquare.",
-  },
-  {
-    id: "uomo-lenitiva-fiale",
-    slug: "fiale-lenitive-uomo",
-    name: "Fiale Lenitive Cute",
-    gender: "uomo",
-    type: "trattamenti",
-    tag: "Novità",
-    price: 28,
-    popularity: 7,
-    line: "lenitiva",
-    lineLabel: "Linea lenitiva",
-    image: "uomo/linea lenitiva/Physia oe_ Fiala Lenitiva_ render.jpg",
-    short: "Sollievo per cute sensibile.",
-    benefits: [
-      "Aiuta a ridurre sensazioni di fastidio",
-      "Cute più equilibrata",
-      "Uso a cicli durante i periodi di sensibilità",
-    ],
-    howTo: "Applicare direttamente sulle zone interessate e massaggiare.",
-  },
-  {
-    id: "uomo-lenitiva-fluido",
-    slug: "fluido-lenitivo-uomo",
-    name: "Fluido Demolenitivo",
-    gender: "uomo",
-    type: "trattamenti",
-    tag: "Novità",
-    price: 24,
-    popularity: 8,
-    line: "lenitiva",
-    lineLabel: "Linea lenitiva",
-    image: "uomo/linea lenitiva/Physia oe_ Fluido Demolenitivo _ render.jpg",
-    short: "Comfort quotidiano per cute sensibilizzata.",
-    benefits: [
-      "Dona una sensazione di immediato benessere",
-      "Può essere utilizzato tra uno shampoo e l’altro",
-      "Texture leggera",
-    ],
-    howTo: "Distribuire sulla cute asciutta o umida e massaggiare.",
-  },
-  {
-    id: "uomo-lenitiva-shampoo",
-    slug: "shampessenza-lenitiva-uomo",
-    name: "Shampessenza Lenitiva",
-    gender: "uomo",
-    type: "shampoo",
-    tag: "Novità",
-    price: 20,
-    popularity: 9,
-    line: "lenitiva",
-    lineLabel: "Linea lenitiva",
-    image: "uomo/linea lenitiva/Physia oe_ Shampessenza Lenitivo _ render.jpg",
     short: "Detersione delicata per cute sensibile.",
     benefits: [
-      "Aiuta a mantenere la cute in equilibrio",
-      "Dona comfort al lavaggio",
-      "Adatto a lavaggi frequenti",
+      "Rispetta il film idrolipidico",
+      "Lascia i capelli morbidi",
+      "Formula lenitiva",
     ],
-    howTo: "Applicare su cute e capelli bagnati, massaggiare e risciacquare.",
+    howTo: "Massaggiare su cute e capelli umidi, lasciare agire un istante e risciacquare.",
   },
 ];
 
 const STORAGE_KEY = "ds-society-cart";
-const WHATSAPP_PHONE = "391234567890";
+const WHATSAPP_PHONE = "393284534523";
 
 let cartBannerNode;
 let cartBannerTimeout;
@@ -436,11 +245,26 @@ function renderBestSellers() {
   const best = [...PRODUCTS]
     .filter((p) => p.gender !== "donna") // Filter out women's products
     .sort((a, b) => a.popularity - b.popularity)
-    .slice(0, 6);
+    .slice(0, 3);
   container.innerHTML = "";
   best.forEach((product) => {
     container.appendChild(createProductCard(product));
   });
+
+  // Create explore container
+  const exploreContainer = document.createElement("div");
+  exploreContainer.style.gridColumn = "1 / -1";
+  exploreContainer.style.textAlign = "center";
+  exploreContainer.style.marginTop = "32px";
+  
+  // Create explore button
+  const exploreBtn = document.createElement("a");
+  exploreBtn.href = "shop-uomo.html";
+  exploreBtn.className = "btn-secondary";
+  exploreBtn.textContent = "Esplora Tutto";
+  
+  exploreContainer.appendChild(exploreBtn);
+  container.appendChild(exploreContainer);
 }
 
 function createProductCard(product) {
@@ -865,10 +689,11 @@ function initPage() {
   updateCartBadge();
   initFloatingWhatsApp();
   initNav();
+  renderBestSellers(); // Prova a renderizzare i bestseller se presente il container
 
   const page = document.body.getAttribute("data-page");
   if (page === "home") {
-    renderBestSellers();
+    // renderBestSellers già chiamato sopra
   } else if (page === "shop-donna") {
     initShopPage("donna");
   } else if (page === "shop-uomo") {
