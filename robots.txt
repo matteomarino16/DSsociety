@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /carrello.html
+Disallow: /privacy.html
+Disallow: /termini.html
+
+Sitemap: https://dssociety.it/sitemap.xml
