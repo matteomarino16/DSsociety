@@ -1273,16 +1273,23 @@ body {
   }
 
   /* Riduzione dimensione bottoni prodotto su mobile */
+  .product-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
   .product-actions .btn-primary,
   .product-actions .btn-secondary {
-    padding: 8px 10px;
-    font-size: 11px;
-    letter-spacing: 0.08em;
+    width: 100%;
+    min-width: 0;
+    padding: 7px 8px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
   }
   .btn-add-cart {
     padding: 10px;
-    font-size: 11px;
-    letter-spacing: 0.08em;
+    font-size: 10px;
+    letter-spacing: 0.06em;
   }
   /* Pagina prodotto: bottone e selettore quantità */
   .page[data-page="product"] .btn-primary {
