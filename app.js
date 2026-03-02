@@ -932,9 +932,10 @@ function updateCartBadge() {
 function renderBestSellers() {
   const container = document.querySelector("[data-best-sellers]");
   if (!container) return;
-  const best = [...PRODUCTS]
-    .filter((p) => p.gender !== "donna")
-    .sort((a, b) => a.popularity - b.popularity);
+  // 3 prodotti casuali (uomo) sia su mobile che desktop
+  const pool = PRODUCTS.filter((p) => p.gender !== "donna");
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  const best = shuffled.slice(0, 3);
   container.innerHTML = "";
   best.forEach((product) => {
     container.appendChild(createProductCard(product));
