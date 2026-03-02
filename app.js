@@ -932,10 +932,11 @@ function updateCartBadge() {
 function renderBestSellers() {
   const container = document.querySelector("[data-best-sellers]");
   if (!container) return;
-  const best = [...PRODUCTS]
-    .filter((p) => p.gender !== "donna") // Filter out women's products
-    .sort((a, b) => a.popularity - b.popularity)
-    .slice(0, 3);
+  const all = [...PRODUCTS]
+    .filter((p) => p.gender !== "donna")
+    .sort((a, b) => a.popularity - b.popularity);
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  const best = isMobile ? all : all.slice(0, 6);
   container.innerHTML = "";
   best.forEach((product) => {
     container.appendChild(createProductCard(product));

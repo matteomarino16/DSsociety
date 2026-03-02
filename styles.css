@@ -416,6 +416,9 @@ body {
 .product-actions .btn-secondary {
   flex: 1;
   text-align: center;
+  padding: 8px 12px; /* più piccoli su desktop */
+  font-size: 11px;
+  min-width: 0;
 }
 
 .product-actions .btn-primary:active {
@@ -1194,6 +1197,10 @@ body {
     background: transparent;
     order: 1; /* Toggle before cart */
     color: #000000;
+  }
+
+  .nav-toggle svg {
+    stroke: #000000; /* linee hamburger nere su mobile */
   }
 
   .nav-cart {
