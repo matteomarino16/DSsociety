@@ -1202,6 +1202,9 @@ body {
   .nav-toggle svg {
     stroke: #000000; /* linee hamburger nere su mobile */
   }
+  .nav-toggle svg line {
+    stroke: #000000;
+  }
 
   .nav-cart {
     height: 36px;
