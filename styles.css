@@ -374,6 +374,17 @@ body {
 }
 .product-image img { width: 100%; height: auto; display: block; }
 
+/* Attrezzature: immagini centrali, rapporto 1:1 e contenimento */
+.page[data-page="attrezzature"] .product-image {
+  aspect-ratio: 1/1;
+  padding: 16px;
+}
+.page[data-page="attrezzature"] .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .product-meta-top {
   display: flex;
   justify-content: space-between;

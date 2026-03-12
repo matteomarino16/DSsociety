@@ -792,6 +792,107 @@ const PRODUCTS = [
     ],
     howTo: "Utilizzare per asciugare barba e capelli dopo il trattamento.",
   },
+  // --- ATTREZZATURE (ACCESSORI DEDICATI) ---
+  {
+    id: "tool-m5-clipper",
+    slug: "m5-clipper",
+    name: "M5 Clipper",
+    gender: "uomo",
+    type: "accessori",
+    tag: "Pro",
+    price: 59,
+    popularity: 37,
+    line: "attrezzature",
+    lineLabel: "Attrezzature",
+    image: "attrezzature/MOVE-M5Clipper_1800x1800.png.webp",
+    short: "Clipper professionale per tagli precisi e rapidi.",
+    benefits: [
+      "Motore potente e silenzioso",
+      "Lame ad alta precisione",
+      "Adatta per uso prolungato",
+    ],
+    howTo: "Utilizzare su capelli asciutti seguendo le guide di taglio.",
+  },
+  {
+    id: "tool-pennello-giallo",
+    slug: "pennello-giallo-drill-barber",
+    name: "Pennello Giallo Drill Barber",
+    gender: "uomo",
+    type: "accessori",
+    tag: "Barber",
+    price: 16,
+    popularity: 38,
+    line: "attrezzature",
+    lineLabel: "Attrezzature",
+    image: "attrezzature/pennello-giallo-drillbarber.png",
+    short: "Pennello per rasatura con finitura gialla antiscivolo.",
+    benefits: [
+      "Setole compatte",
+      "Montaggio schiuma rapido",
+      "Impugnatura ergonomica",
+    ],
+    howTo: "Inumidire e montare il sapone con movimenti circolari.",
+  },
+  {
+    id: "tool-pennello-verde",
+    slug: "pennello-verde-drill-barber",
+    name: "Pennello Verde Drill Barber",
+    gender: "uomo",
+    type: "accessori",
+    tag: "Barber",
+    price: 16,
+    popularity: 39,
+    line: "attrezzature",
+    lineLabel: "Attrezzature",
+    image: "attrezzature/pennello-verde-drillbarber.png",
+    short: "Pennello verde per schiume dense e cremose.",
+    benefits: [
+      "Setole morbide e resistenti",
+      "Distribuzione uniforme",
+      "Asciugatura rapida",
+    ],
+    howTo: "Bagnare, prelevare il sapone e montare in ciotola.",
+  },
+  {
+    id: "tool-pennello-nero",
+    slug: "pennello-nero-drill",
+    name: "Pennello Nero Drill",
+    gender: "uomo",
+    type: "accessori",
+    tag: "Barber",
+    price: 16,
+    popularity: 40,
+    line: "attrezzature",
+    lineLabel: "Attrezzature",
+    image: "attrezzature/pennellonero-drill.png",
+    short: "Pennello nero essenziale per rasatura tradizionale.",
+    benefits: [
+      "Presa confortevole",
+      "Setole equilibrate",
+      "Design pulito",
+    ],
+    howTo: "Montare la schiuma e applicare con movimenti circolari.",
+  },
+  {
+    id: "tool-pettine-drill",
+    slug: "pettine-drill-barber",
+    name: "Pettine Drill Barber",
+    gender: "uomo",
+    type: "accessori",
+    tag: "Barber",
+    price: 12,
+    popularity: 41,
+    line: "attrezzature",
+    lineLabel: "Attrezzature",
+    image: "attrezzature/pettinedrillbarber.png",
+    short: "Pettine compatto per definire barba e baffi.",
+    benefits: [
+      "Denti levigati anti-impiglio",
+      "Compatto e resistente",
+      "Ideale per ritocchi precisi",
+    ],
+    howTo: "Pettinare barba e baffi prima dello styling.",
+  },
 ];
 
 const STORAGE_KEY = "ds-society-cart";
@@ -933,7 +1034,8 @@ function renderBestSellers() {
   const container = document.querySelector("[data-best-sellers]");
   if (!container) return;
   // 3 prodotti casuali (uomo) sia su mobile che desktop
-  const pool = PRODUCTS.filter((p) => p.gender !== "donna");
+  // Escludi accessori/attrezzature (pennelli, pettini, clipper)
+  const pool = PRODUCTS.filter((p) => p.gender !== "donna" && p.type !== "accessori");
   const shuffled = [...pool].sort(() => Math.random() - 0.5);
   const best = shuffled.slice(0, 3);
   container.innerHTML = "";
@@ -1053,6 +1155,16 @@ function createProductCard(product) {
   return card;
 }
 
+function renderTools() {
+  const grid = document.querySelector("[data-tools-grid]");
+  if (!grid) return;
+  const tools = PRODUCTS.filter((p) => p.type === "accessori" && p.line === "attrezzature");
+  grid.innerHTML = "";
+  tools.forEach((p) => {
+    grid.appendChild(createProductCard(p));
+  });
+}
+
 function initShopPage(gender) {
   const grid = document.querySelector("[data-shop-grid]");
   if (!grid) return;
@@ -1063,6 +1175,8 @@ function initShopPage(gender) {
 
   function applyFilters() {
     let result = PRODUCTS.filter((p) => p.gender === gender);
+    // Escludi attrezzature (accessori) dallo Shop Uomo
+    result = result.filter((p) => p.type !== "accessori");
 
     const typeValue = typeSelect ? typeSelect.value : "all";
     if (typeValue !== "all") {
@@ -1410,7 +1524,8 @@ function initPage() {
   initFloatingWhatsApp();
   initNav();
   initCookieBanner();
-  renderBestSellers(); // Prova a renderizzare i bestseller se presente il container
+  renderBestSellers(); // se presente il container
+  renderTools(); // se presente il container
 
   const page = document.body.getAttribute("data-page");
   if (page === "home") {
